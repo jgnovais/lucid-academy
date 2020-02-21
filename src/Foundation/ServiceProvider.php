@@ -10,5 +10,6 @@ class ServiceProvider extends BaseServiceProvider
     {
         // Register the service providers of your Services here.
         // $this->app->register('full namespace here')
+        $this->app->register('App\Services\ToDoList\Providers\ToDoListServiceProvider');
     }
 }

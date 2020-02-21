@@ -1,0 +1,18 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  localmysql:
+    container_name: lucid_academy_mysql
+    image: mariadb:10.3.4
+    volumes:
+    - dbdata:/var/lib/localmysql
+    environment:
+    - MYSQL_DATABASE=lucid
+    - MYSQL_USER=academy
+    - MYSQL_PASSWORD=secret
+    - MYSQL_ROOT_PASSWORD=secret
+    ports:
+    - "33062:3306"
+volumes:
+  dbdata:
