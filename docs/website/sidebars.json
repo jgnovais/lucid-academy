@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Lucid": ["doc1", "doc2"]
+    "Lucid": ["installation", "route_controller_feature_flow"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]

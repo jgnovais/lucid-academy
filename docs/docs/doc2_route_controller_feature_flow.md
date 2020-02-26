@@ -1,5 +1,5 @@
 ---
-id: doc2
+id: route_controller_feature_flow
 title: Route -> Controller -> Feature flow
 ---
 
