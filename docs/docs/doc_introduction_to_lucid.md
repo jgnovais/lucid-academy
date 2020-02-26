@@ -1,6 +1,6 @@
 ---
 id: introduction_to_lucid
-title: Introduction of Lucid Archtecture
+title: Introduction of Lucid Architecture
 sidebar_label: Introduction
 ---
 
