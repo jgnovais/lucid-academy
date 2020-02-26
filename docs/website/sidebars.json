@@ -1,5 +1,8 @@
 {
   "docs": {
+    "Introduction": ["introduction_to_lucid"]
+  },
+  "examples": {
     "Lucid Examples": ["to_do_list"]
   },
   "docs-other": {

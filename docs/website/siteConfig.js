@@ -38,7 +38,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'to_do_list', label: 'Docs'},
+    {doc: 'introduction_to_lucid', label: 'Docs'},
     {doc: 'to_do_list', label: 'Examples'},
     {doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
@@ -101,7 +101,7 @@ const siteConfig = {
   // enableUpdateBy: true,
 
   // Show documentation's last update time.
-  // enableUpdateTime: true,
+  enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
