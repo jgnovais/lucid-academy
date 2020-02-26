@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Lucid": ["installation", "route_controller_feature_flow"]
+    "Lucid Examples": ["to_do_list"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
