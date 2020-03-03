@@ -6,44 +6,73 @@ sidebar_label: To Do List
 
 ## Objective 
 
-Basic introduction to Lucid Multi-service [monolith]
+In this example, we are going to do an API using Lucid architecture monolith, to create a to-do list API.
 
 ## Difficulty
 
 Beginner
 
-## What is to do list?
+## What is a to-do list?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.
+A to-do list is a list of tasks that you need to complete in a determined period. It helps you to organize better your day and prioritize what do you need to do.
+
+Our Lucid to-do list example, we are going to do an API using Lucid architecture to create it  with the following requisites:
+
+ - Create a to-do list;
+ - Edit a to-do list;
+ - Create many tasks to an existable to-do list;
+ - Edit any tasks of a to-do list;
+ - Conclude a task
+ - Conclude a to-do list
+ - Delete a task
+ - Delete a to-do list
+
+## Useful Links
+
+[Lucid Architecture](https://medium.com/vine-lab/the-lucid-architecture-concept-ad8e9ed0258f) - [to-do list](https://dictionary.cambridge.org/pt/dicionario/ingles/to-do-list) - [Laravel](https://laravel.com/) - [Composer](https://getcomposer.org/doc/00-intro.md#introduction)
 
 ## Lucid Installation
 
+Using Laravel 6
+To start your project with Lucid right away, run the following command:
+
 ```
-Mauris vestibulum ullamcorper nibh, ut semper purus pulvinar ut. Donec volutpat orci sit amet mauris malesuada, non pulvinar augue aliquam. Vestibulum ultricies at urna ut suscipit. Morbi iaculis, erat at imperdiet semper, ipsum nulla sodales erat, eget tincidunt justo dui quis justo. Pellentesque dictum bibendum diam at aliquet. Sed pulvinar, dolor quis finibus ornare, eros odio facilisis erat, eu rhoncus nunc dui sed ex. Nunc gravida dui massa, sed ornare arcu tincidunt sit amet. Maecenas efficitur sapien neque, a laoreet libero feugiat ut.
+composer create-project lucid-arch/laravel to-do-list
 ```
+
+This will give you a Laravel 6 installation with Lucid out-of-the-box. If you wish to download other versions of Laravel , please <a style="color:blue"  href="https://github.com/lucid-architecture/laravel#lucid" target="_blanc"> read more </a>
+
+Doing: { Here we will be talk about, configs, like: databases on docker and .etc}
 
 ## Request Flow
-
-Nulla facilisi. Maecenas sodales nec purus eget posuere. Sed sapien quam, pretium a risus in, porttitor dapibus erat. Sed sit amet fringilla ipsum, eget iaculis augue. Integer sollicitudin tortor quis ultricies aliquam. Suspendisse fringilla nunc in tellus cursus, at placerat tellus scelerisque. Sed tempus elit a sollicitudin rhoncus. Nulla facilisi. Morbi nec dolor dolor. 
 
 <img src="../img/route_controller_feature_flow.png"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras et aliquet lectus. Pellentesque sit amet eros nisi. Quisque ac sapien in sapien congue accumsan. Nullam in posuere ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin lacinia leo a nibh fringilla pharetra.
+As we see in the image below, we can see an overview of the request flow when we are using the Lucid Architecture.
+Imagine a person, using our app "to-do list app". 
+
+So, when he presses the button to conclude tasks, what happens? Let's see some steps:
+ - 1º The user clicks on the button and the app, call our API using a web site hosted in someplace in the world;
+ - 2º The API, in other words, our Laravel project, receives this request and once time found the right route, it calls our controller. Until now it is the same way when we use the pure Laravel project or a lucid Laravel project.
+ - 3º Here in the controller the things begin to change. Instead of calling a Model or whatever another pattern you are using. Now the Lucid Controller calls "The Feature". Imagine the feature as a Menu of instructions (or a to-do list ;-), there has a list of tasks that need to execute to do what is necessary to conclude the operation called by the user and returns a response;
+- 4º Those tasks in the feature we called "The Jobs". It is where our logic is written, where the business rules can be implemented, they can receive parameters and returns something that can be used by the next job called in the feature. Or this job also can be an async job, in other words, the feature can call this async job and don't need to wait for the return, the answer will be available later.
+
+So, I hope that you get an idea of how the request flow works when we are using the Lucid Architecture.
 
 ## Features running Jobs
 
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin venenatis lectus dui, vel ultrices ante bibendum hendrerit. Aenean egestas feugiat dui id hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur in tellus laoreet, eleifend nunc id, viverra leo. Proin vulputate non dolor vel vulputate. Curabitur pretium lobortis felis, sit amet finibus lorem suscipit ut. Sed non mollis risus. Duis sagittis, mi in euismod tincidunt, nunc mauris vestibulum urna, at euismod est elit quis erat. Phasellus accumsan vitae neque eu placerat. In elementum arcu nec tellus imperdiet, eget maximus nulla sodales. Curabitur eu sapien eget nisl sodales fermentum.
+left words yet...
 
 ## Domains
 
-Phasellus pulvinar ex id commodo imperdiet. Praesent odio nibh, sollicitudin sit amet faucibus id, placerat at metus. Donec vitae eros vitae tortor hendrerit finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vitae purus dolor. Duis suscipit ac nulla et finibus. Phasellus ac sem sed dui dictum gravida. Phasellus eleifend vestibulum facilisis. Integer pharetra nec enim vitae mattis. Duis auctor, lectus quis condimentum bibendum, nunc dolor aliquam massa, id bibendum orci velit quis magna. Ut volutpat nulla nunc, sed interdum magna condimentum non. Sed urna metus, scelerisque vitae consectetur a, feugiat quis magna. Donec dignissim ornare nisl, eget tempor risus malesuada quis.
+left words yet...
 
 ## Data directory
 
-Phasellus pulvinar ex id commodo imperdiet. Praesent odio nibh, sollicitudin sit amet faucibus id, placerat at metus. Donec vitae eros vitae tortor hendrerit finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vitae purus dolor. Duis suscipit ac nulla et finibus. Phasellus ac sem sed dui dictum gravida. Phasellus eleifend vestibulum facilisis. Integer pharetra nec enim vitae mattis. Duis auctor, lectus quis condimentum bibendum, nunc dolor aliquam massa, id bibendum orci velit quis magna. Ut volutpat nulla nunc, sed interdum magna condimentum non. Sed urna metus, scelerisque vitae consectetur a, feugiat quis magna. Donec dignissim ornare nisl, eget tempor risus malesuada quis.
+left words yet...
 
 ## Repository pattern
 
-Phasellus pulvinar ex id commodo imperdiet. Praesent odio nibh, sollicitudin sit amet faucibus id, placerat at metus. Donec vitae eros vitae tortor hendrerit finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vitae purus dolor. Duis suscipit ac nulla et finibus. Phasellus ac sem sed dui dictum gravida. Phasellus eleifend vestibulum facilisis. Integer pharetra nec enim vitae mattis. Duis auctor, lectus quis condimentum bibendum, nunc dolor aliquam massa, id bibendum orci velit quis magna. Ut volutpat nulla nunc, sed interdum magna condimentum non. Sed urna metus, scelerisque vitae consectetur a, feugiat quis magna. Donec dignissim ornare nisl, eget tempor risus malesuada quis.
+left words yet...

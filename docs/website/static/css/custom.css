@@ -21,3 +21,8 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+a {
+    color: blue;
+    font-weight: bold;
+}
